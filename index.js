@@ -10,8 +10,12 @@ const PORT = process.env.PORT || 5000;
 
 // --- MIDDLEWARE ---
 // Mengaktifkan CORS agar frontend (port 5174) bisa mengakses backend (port 5000)
-app.use(cors());
-// Mengubah body request menjadi JSON agar bisa dibaca oleh server
+app.use(cors({
+  origin: "*", // Jika nanti kamu sudah punya domain frontend, ganti "*" dengan URL frontend-mu
+  methods: ["GET", "POST", "DELETE", "PUT"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // --- ROUTES ---
