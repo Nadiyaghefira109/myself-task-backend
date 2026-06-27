@@ -1,0 +1,9 @@
+# Mengabaikan folder modul node
+node_modules
+
+# Mengabaikan file konfigurasi rahasia
+.env
+
+# Mengabaikan file sistem (khusus Mac/Windows)
+.DS_Store
+Thumbs.db
